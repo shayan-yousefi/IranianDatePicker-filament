@@ -4,9 +4,12 @@ namespace ShayanYS\IranianDatePicker\Components\forms;
 
 use Carbon\Carbon;
 use Filament\Forms\Components\Field;
+use ShayanYS\IranianDatePicker\Traits\HasJsDateFormat;
 
 class IranianDatePickerField extends Field
 {
+    use HasJsDateFormat;
+
     protected string $view = 'IranianDatePicker::forms.components.iranian-date-picker-field';
 
     private ?int $minDate = null, $maxDate = null, $hourStep = 1, $minuteStep = 1, $secondStep = 1;
@@ -132,13 +135,6 @@ class IranianDatePickerField extends Field
     public function getDisabledDates(): array
     {
         return $this->evaluate($this->disabledDates);
-    }
-    private function makeJsDateFormat(string $format)
-    {
-        $replacements = ['Y' => 'YYYY', 'd' => 'DD', 'D' => 'dd', 'j' => 'D', 'l' => 'ddd', 'N' => 'd', 'w' => 'd', 'z' => 'DDD', 'W' => 'w', 'F' => 'MMMM', 'm' => 'MM', 'M' => 'MMM', 'n' => 'M', 'o' => 'YYYY', 'y' => 'YY', 'A' => 'a', 'g' => 'h', 'G' => 'H', 'h' => 'hh', 'H' => 'HH', 'i' => 'mm', 's' => 'ss', 'u' => 'X', 'O' => 'ZZ'];
-
-        return strtr($format,$replacements);
-
     }
 
     public function getFormat(){
