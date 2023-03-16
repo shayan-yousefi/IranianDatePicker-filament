@@ -28,7 +28,7 @@
             },
             calendar:{
                 persian:{
-                    locale: 'fa'
+                    locale: '{{\Illuminate\Support\Facades\Config::get('app.locale')}}'
                 },
             },
                 format: @js($getDisplayFormat()),
