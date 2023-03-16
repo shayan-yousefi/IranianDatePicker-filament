@@ -72,3 +72,6 @@ The secondStep method increments or decrements the second counter in the time pi
 IranianDatePickerField::make('date')->disabledDates(['2023-03-17','2023-03-18','1402-01-01']);
 ```
 The disabledDates method disables the dates passed with an array in the date selector (you can also enter a solar date).
+
+## license
+Freely distributable under the terms of the [MIT](https://opensource.org/licenses/MIT "MIT") license.
