@@ -16,6 +16,7 @@ class IranianDatePickerServiceProvider extends PluginServiceProvider
 
     protected array $styles = [
         'persianDatePickerCss' => __DIR__ . '/../resources/css/persianDatePicker.css',
+        'persianDatePickerCustomCss' => __DIR__ . '/../resources/css/customDatePicker.css',
     ];
 
     public function configurePackage(Package $package): void
