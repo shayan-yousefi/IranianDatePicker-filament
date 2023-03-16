@@ -1,5 +1,7 @@
 .datepicker-plot-area {
     width: min-content;
+    border-radius: 10px;
+    padding: 12px;
 }
 
 .dark .datepicker-plot-area,

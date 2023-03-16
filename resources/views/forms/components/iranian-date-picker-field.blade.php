@@ -57,6 +57,9 @@
                         return false;
                     }
                     return true;
+                },
+                toolbox:{
+                    enabled: false
                 }
             });
 
