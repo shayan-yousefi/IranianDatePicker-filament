@@ -1,0 +1,27 @@
+{
+    "name": "shayanys/iranian-date-picker",
+    "type": "filament-plugin",
+    "require": {
+        "filament/filament": "2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shayan",
+            "email": "shayan.yousefi100@yahoo.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "ShayanYS\\IranianDatePicker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ShayanYS\\IranianDatePicker\\IranianDatePickerServiceProvider"
+            ]
+        }
+    }
+}
