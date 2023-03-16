@@ -9,14 +9,14 @@ class IranianDatePickerServiceProvider extends PluginServiceProvider
 {
 
     protected array $beforeCoreScripts = [
-        'jquery' => __DIR__ . '/../resources/js/jquery.js',
-        'persianDateJs' => __DIR__ . '/../resources/js/persianDate.js',
-        'persianDatePickerJs' => __DIR__ . '/../resources/js/persianDatePicker.js',
+        'jquery' => __DIR__ . '/../resources/inc/persianDatePicker/js/jquery.js',
+        'persianDateJs' => __DIR__ . '/../resources/inc/persianDatePicker/js/persianDate.js',
+        'persianDatePickerJs' => __DIR__ . '/../resources/inc/persianDatePicker/js/persianDatePicker.js',
     ];
 
     protected array $styles = [
-        'persianDatePickerCss' => __DIR__ . '/../resources/css/persianDatePicker.css',
-        'persianDatePickerCustomCss' => __DIR__ . '/../resources/css/customDatePicker.css',
+        'persianDatePickerCss' => __DIR__ . '/../resources/inc/persianDatePicker/css/persianDatePicker.css',
+        'persianDatePickerCustomCss' => __DIR__ . '/../resources/inc/persianDatePicker/css/customDatePicker.css',
     ];
 
     public function configurePackage(Package $package): void
