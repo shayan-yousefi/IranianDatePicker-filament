@@ -78,5 +78,15 @@ IranianDatePickerField::make('date')->disabledDates(['2023-03-17','2023-03-18','
 ```
 The disabledDates method disables the dates passed with an array in the date selector (you can also enter a solar date).
 
+## column
+to show date in Iranian format use this column
+```php
+IranianDatePickerFieldColumn::make('date');
+
+//you can use it with format method
+IranianDatePickerFieldColumn::make('date')->format('Y/m/d');
+
+```
+
 ## license
 Freely distributable under the terms of the [MIT](https://opensource.org/licenses/MIT "MIT") license.
