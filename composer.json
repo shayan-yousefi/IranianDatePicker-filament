@@ -2,7 +2,8 @@
     "name": "shayanys/iranian-date-picker",
     "type": "filament-plugin",
     "require": {
-        "filament/forms": "^2.0"
+        "filament/forms": "^2.0",
+        "php": "^8.1"
     },
     "license": "MIT",
     "authors": [
