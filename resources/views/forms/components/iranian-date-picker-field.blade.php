@@ -64,9 +64,8 @@
             });
 
 
-        " type="text" id="visible_{{$getId()}}">
+        " type="text" x-bind:value="new persianDate().unix(@js(strtotime($getState()))).toLocale(@js(\Illuminate\Support\Facades\Config::get('app.locale'))).format(@js($getDisplayFormat()))" id="visible_{{$getId()}}">
 
-        <input type="hidden" id="{{$getId()}}" x-model="state">
-
+        <input type="hidden" x-model="state" x-bind:value="new persianDate().unix(@js(strtotime($getState()))).toLocale(@js(\Illuminate\Support\Facades\Config::get('app.locale'))).format(@js($getFormat()))" id="{{$getId()}}" >
     </div>
 </x-dynamic-component>
