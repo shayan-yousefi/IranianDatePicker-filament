@@ -2,6 +2,11 @@ The IranianPersianDatePicker package was created to add the solar calendar field
 
 thanks to [babakhani](https://github.com/babakhani "babakhani") for the wonderful [pwt.datepicker](https://github.com/babakhani/pwt.datepicker "pwt.datepicker") javascript package.
 
+## Instalation
+```bash
+composer require shayanys/iranian-date-picker
+```
+
 ## Usage
 in your form schema write:
 ```php
