@@ -2,7 +2,7 @@
 ![IraninaDatePicker-filament size](https://img.shields.io/github/languages/code-size/shayan100/IraninaDatePicker-filament)
 [![IraninaDatePicker-filament version](https://img.shields.io/packagist/v/shayanys/iranian-date-picker)](https://packagist.org/packages/shayanys/iranian-date-picker)
 
-The IranianPersianDatePicker package was created to add the solar calendar field to the filament
+The IranianPersianDatePicker package was created to add the Iranian calendar field to the filament
 
 thanks to [babakhani](https://github.com/babakhani "babakhani") for the wonderful [pwt.datepicker](https://github.com/babakhani/pwt.datepicker "pwt.datepicker") javascript package.
 
@@ -80,7 +80,7 @@ The secondStep method increments or decrements the second counter in the time pi
 ```php
 IranianDatePickerField::make('date')->disabledDates(['2023-03-17','2023-03-18','1402-01-01']);
 ```
-The disabledDates method disables the dates passed with an array in the date selector (you can also enter a solar date).
+The disabledDates method disables the dates passed with an array in the date selector (you can also enter a Iranian date).
 
 ## column
 to show date in Iranian format use this column
