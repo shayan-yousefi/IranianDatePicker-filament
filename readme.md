@@ -1,3 +1,7 @@
+![IraninaDatePicker-filament license](https://img.shields.io/github/license/shayan100/IraninaDatePicker-filament)
+![IraninaDatePicker-filament size](https://img.shields.io/github/languages/code-size/shayan100/IraninaDatePicker-filament)
+[![IraninaDatePicker-filament version](https://img.shields.io/packagist/v/shayanys/iranian-date-picker)](https://packagist.org/packages/shayanys/iranian-date-picker)
+
 The IranianPersianDatePicker package was created to add the solar calendar field to the filament
 
 thanks to [babakhani](https://github.com/babakhani "babakhani") for the wonderful [pwt.datepicker](https://github.com/babakhani/pwt.datepicker "pwt.datepicker") javascript package.
