@@ -7,7 +7,7 @@ The IranianPersianDatePicker package was created to add the Iranian calendar fie
 thanks to [babakhani](https://github.com/babakhani "babakhani") for the wonderful [pwt.datepicker](https://github.com/babakhani/pwt.datepicker "pwt.datepicker") javascript package.
 
 ## Instalation
-```bash
+```shell
 composer require shayanys/iranian-date-picker
 ```
 
@@ -58,23 +58,17 @@ IranianDatePickerField::make('date')->withoutSeconds();
 ```
 The withoutSeconds method loads the date picker and time picker without seconds
 
-## hourStep
+## hourStep, minuteStep, and secondStep
 ```php
 IranianDatePickerField::make('date')->hourStep(2);
 ```
-The hourStep method increments or decrements the hour counter in the time picker each time by the number passed to the method.
-
-## minuteStep
 ```php
 IranianDatePickerField::make('date')->minuteStep(2);
 ```
-The minuteStep method increments or decrements the minute counter in the time picker each time by the number passed to the method.
-
-## secondStep
 ```php
 IranianDatePickerField::make('date')->secondStep(2);
 ```
-The secondStep method increments or decrements the second counter in the time picker each time by the number passed to the method.
+You may also customize the input interval for increasing the hours / minutes / seconds using the hoursStep() , minutesStep() or secondsStep();
 
 ## disabledDates
 ```php
