@@ -53,6 +53,7 @@
                     },
                 @endif
                 checkDate:function (unix){
+                console.log(new persianDate(unix).toLocale('fa'))
                     if($.inArray(new persianDate(unix).toLocale('en').format('YYYY-MM-DD'),@js($getDisabledDates())) !== -1 || $.inArray(new persianDate(unix).toCalendar('gregorian').toLocale('en').format('YYYY-MM-DD'),@js($getDisabledDates())) !== -1){
                         return false;
                     }
@@ -64,8 +65,8 @@
             });
 
 
-        " type="text" x-bind:value="new persianDate().unix(@js(strtotime($getState()))).toLocale(@js(\Illuminate\Support\Facades\Config::get('app.locale'))).format(@js($getDisplayFormat()))" id="visible_{{$getId()}}">
+        " type="text" x-bind:value="state ? new persianDate(Date.parse(state)).toLocale(@js(\Illuminate\Support\Facades\Config::get('app.locale'))).format(@js($getDisplayFormat())) : ''" id="visible_{{$getId()}}">
 
-        <input type="hidden" x-model="state" x-bind:value="new persianDate().unix(@js(strtotime($getState()))).toLocale(@js(\Illuminate\Support\Facades\Config::get('app.locale'))).format(@js($getFormat()))" id="{{$getId()}}" >
+        <input type="hidden" x-model="state" id="{{$getId()}}" >
     </div>
 </x-dynamic-component>
