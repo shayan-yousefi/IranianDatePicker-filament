@@ -88,3 +88,19 @@ IranianDatePickerFieldColumn::make('date')->format('Y/m/d');
 
 ## license
 Freely distributable under the terms of the [MIT](https://opensource.org/licenses/MIT "MIT") license.
+
+---
+
+ <!--
+This font is considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (PY0845KQ)
+--------------------------------------------------------------------------------------
+...-->
+<a target="_blank" href="https://fontiran.com/license/PY0845KQ">
+   <div style="width: 123px;font-size: 10px;">
+     <img src="https://fontiran.com/storage/uploads/images/2023/1/badge1-minDN14Uj.png" width="100" height="100" alt="فونت ایران‌سنس">
+     <br>
+     <span style="text-align: justify;">This package legally uses IranSans font. </span>
+   </div>
+ </a>
