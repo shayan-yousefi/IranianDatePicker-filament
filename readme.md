@@ -98,9 +98,9 @@ This set of fonts are used in this project under the license: (PY0845KQ)
 --------------------------------------------------------------------------------------
 ...-->
 <a target="_blank" href="https://fontiran.com/license/PY0845KQ">
-<p style="text-align: center">
-<img src="https://fontiran.com/storage/uploads/images/2023/1/badge1-minDN14Uj.png" width="50" height="50" alt="فونت ایران‌سنس">
-<br>
-This package legally <br> uses IranSans font.
-</p>
+    <p align="center">
+        <img src="https://fontiran.com/storage/uploads/images/2023/1/badge1-minDN14Uj.png" width="50" height="50" alt="فونت ایران‌سنس">
+        <br>
+        This package legally <br> uses IranSans font.
+    </p>
 </a>
