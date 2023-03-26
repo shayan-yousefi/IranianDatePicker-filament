@@ -53,7 +53,6 @@
                     },
                 @endif
                 checkDate:function (unix){
-                console.log(new persianDate(unix).toLocale('fa'))
                     if($.inArray(new persianDate(unix).toLocale('en').format('YYYY-MM-DD'),@js($getDisabledDates())) !== -1 || $.inArray(new persianDate(unix).toCalendar('gregorian').toLocale('en').format('YYYY-MM-DD'),@js($getDisabledDates())) !== -1){
                         return false;
                     }
