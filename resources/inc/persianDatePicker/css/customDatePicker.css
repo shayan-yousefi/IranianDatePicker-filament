@@ -2,7 +2,7 @@
     width: min-content;
     border-radius: 10px;
     padding: 12px;
-    font-family: sds;
+    font-family: IRANSansX;
 }
 
 .dark .datepicker-plot-area,
@@ -91,4 +91,8 @@ background: rgb(132 178 255);
     height: 30px;
     border-radius: 5px;
     line-height: 30px;
+}
+
+.iranian-date-picker{
+    font-family: IRANSansX;
 }
