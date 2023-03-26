@@ -23,5 +23,7 @@ class IranianDatePickerServiceProvider extends PluginServiceProvider
     public function configurePackage(Package $package): void
     {
         $package->name('IranianDatePicker')->hasViews();
+
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php'); //load package routes
     }
 }
