@@ -15,6 +15,7 @@ class IranianDatePickerServiceProvider extends PluginServiceProvider
     ];
 
     protected array $styles = [
+        'IranSansFont' => __DIR__ . '/../resources/fonts/fontiran.css',
         'persianDatePickerCss' => __DIR__ . '/../resources/inc/persianDatePicker/css/persianDatePicker.css',
         'persianDatePickerCustomCss' => __DIR__ . '/../resources/inc/persianDatePicker/css/customDatePicker.css',
     ];
