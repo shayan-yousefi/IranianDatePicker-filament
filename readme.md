@@ -79,10 +79,10 @@ The disabledDates method disables the dates passed with an array in the date sel
 ## column
 to show date in Iranian format use this column
 ```php
-IranianDatePickerFieldColumn::make('date');
+IranianDatePickerColumn::make('date');
 
 //you can use it with format method
-IranianDatePickerFieldColumn::make('date')->format('Y/m/d');
+IranianDatePickerColumn::make('date')->format('Y/m/d');
 
 ```
 
