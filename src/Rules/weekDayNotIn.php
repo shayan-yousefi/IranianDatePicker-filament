@@ -20,18 +20,7 @@ class weekDayNotIn implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-
-        $iranWeekDays = [
-          Carbon::SATURDAY => 0,
-          Carbon::SUNDAY => 1,
-          Carbon::MONDAY => 2,
-          Carbon::TUESDAY => 3,
-          Carbon::WEDNESDAY => 4,
-          Carbon::THURSDAY => 5,
-          Carbon::FRIDAY => 6,
-        ];
-
-        $valueWeekDay = $iranWeekDays[Carbon::parse($value)->dayOfWeek];
+        $valueWeekDay = Carbon::parse($value)->locale('fa')->getDaysFromStartOfWeek(Carbon::SATURDAY);
 
         if(in_array($valueWeekDay,$this->days)){
             $fail('IranianDatePicker::validation.weekDayNotIn')->translate();
