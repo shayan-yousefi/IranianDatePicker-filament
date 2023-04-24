@@ -98,12 +98,17 @@ class IranianDatePickerField extends Field
         return $this;
     }
 
-    public function disableWeekDay(array $days): static
+    public function disabledWeekDays(array $days): static
     {
         $this->disabledWeekDays = $days;
         $this->rule(new weekDayNotIn($days));
 
         return $this;
+    }
+
+    public function getDisabledWeekDays(): array
+    {
+        return $this->evaluate($this->disabledWeekDays);
     }
 
     public function getMinDate(): ?int
