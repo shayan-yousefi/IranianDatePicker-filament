@@ -53,7 +53,7 @@
                     },
                 @endif
                 checkDate:function (unix){
-                    if($.inArray(new persianDate(unix).toLocale('en').format('YYYY-MM-DD'),@js($getDisabledDates())) !== -1 || $.inArray(new persianDate(unix).toCalendar('gregorian').toLocale('en').format('YYYY-MM-DD'),@js($getDisabledDates())) !== -1){
+                    if($.inArray(new persianDate(unix).toLocale('en').format('YYYY-MM-DD'),@js($getDisabledDates())) !== -1 || $.inArray(new persianDate(unix).toCalendar('gregorian').toLocale('en').format('YYYY-MM-DD'),@js($getDisabledDates())) !== -1 || $.inArray(new persianDate(unix).day() - 1,@js($getDisabledWeekDays())) !== -1){
                         return false;
                     }
                     return true;
