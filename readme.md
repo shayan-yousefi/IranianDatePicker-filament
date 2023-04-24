@@ -76,6 +76,22 @@ IranianDatePickerField::make('date')->disabledDates(['2023-03-17','2023-03-18','
 ```
 The disabledDates method disables the dates passed with an array in the date selector (you can also enter a Iranian date).
 
+## disabledDates
+```php
+IranianDatePickerField::make('date')->disabledWeekDays([0,1,2]); // this will disable saturday, sunday and monday
+
+/*
+ * saturday => 0
+ * sunday => 1
+ * monday => 2
+ * tuesday => 3
+ * wednesday => 4
+ * thursday => 5
+ * friday => 6
+ */
+```
+this method will disable passed days in date picker and add rule to ensure selected date is not in disabled days by this method
+
 ## column
 to show date in Iranian format use this column
 ```php
