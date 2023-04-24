@@ -4,6 +4,7 @@ namespace ShayanYS\IranianDatePicker\Components\forms;
 
 use Carbon\Carbon;
 use Filament\Forms\Components\Field;
+use ShayanYS\IranianDatePicker\Rules\weekDayNotIn;
 use ShayanYS\IranianDatePicker\Traits\HasJsDateFormat;
 
 class IranianDatePickerField extends Field
@@ -16,7 +17,7 @@ class IranianDatePickerField extends Field
 
     private bool $withTimePicker = true, $withSeconds = true;
 
-    private array $disabledDates = [];
+    private array $disabledDates = [], $disabledWeekDays = [];
 
     private string $timezone = 'Asia/Tehran';
     private ?string $format = 'Y-m-d',$displayFormat = null;
@@ -93,6 +94,14 @@ class IranianDatePickerField extends Field
     public function disabledDates(array $dates): static
     {
         $this->disabledDates = $dates;
+
+        return $this;
+    }
+
+    public function disableWeekDay(array $days): static
+    {
+        $this->disabledWeekDays = $days;
+        $this->rule(new weekDayNotIn($days));
 
         return $this;
     }
