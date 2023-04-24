@@ -26,7 +26,7 @@ class IranianDatePickerField extends Field
     {
         $this->minDate = $date->valueOf();
 
-        $this->rule("after_or_equal::{$date->format('Y-m-d')}");
+        $this->rule("after_or_equal:{$date->format('Y-m-d')}");
 
         return $this;
     }
