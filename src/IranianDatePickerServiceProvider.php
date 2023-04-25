@@ -26,10 +26,24 @@ class IranianDatePickerServiceProvider extends PluginServiceProvider
 
         $this->loadRoutesFrom(__DIR__ . '/../routes/web.php'); //load package routes
 
+        $this->loadIranianDatePickerTranslations(); // load and publish translations
+
+        $this->addViewsToIranianDatePickerPublishes(); // publish views
+    }
+
+    public function loadIranianDatePickerTranslations(){
         $this->loadTranslationsFrom(__DIR__ . '/../lang/','IranianDatePicker');
 
         $this->publishes([
             __DIR__.'/../lang' => $this->app->langPath('vendor/IranianDatePicker'),
+        ]);
+    }
+
+    public function addViewsToIranianDatePickerPublishes(){
+        $this->loadTranslationsFrom(__DIR__ . '/../lang/','IranianDatePicker');
+
+        $this->publishes([
+            __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/IranianDatePicker'),
         ]);
     }
 }
