@@ -1,3 +1,4 @@
+@php use Illuminate\Support\Facades\Config; @endphp
 <x-dynamic-component
     :component="$getFieldWrapperView()"
     :id="$getId()"
@@ -14,8 +15,9 @@
     <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}').defer }">
 
         <input
-            class='block w-full transition duration-75 rounded-lg shadow-sm outline-none focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500 disabled:opacity-70
-            dark:bg-gray-700 dark:text-white dark:focus:border-primary-500 iranian-date-picker'
+            class='block w-full transition duration-75 rounded-lg shadow-sm
+            outline-none focus:border-primary-500 focus:ring-1 focus:ring-inset focus:ring-primary-500 disabled:opacity-70
+            dark:bg-gray-700 dark:text-white dark:focus:border-primary-500 border-gray-300 dark:border-gray-600 iranian-date-picker'
             readonly
             x-init="
             $('#visible_{{str_replace('.','\\\.',$getId())}}').persianDatepicker({
@@ -28,7 +30,7 @@
             },
             calendar:{
                 persian:{
-                    locale: '{{\Illuminate\Support\Facades\Config::get('app.locale')}}'
+                    locale: '{{Config::get('app.locale')}}'
                 },
             },
                 format: @js($getDisplayFormat()),
@@ -64,8 +66,10 @@
             });
 
 
-        " type="text" x-bind:value="state ? new persianDate(Date.parse(state)).toLocale(@js(\Illuminate\Support\Facades\Config::get('app.locale'))).format(@js($getDisplayFormat())) : ''" id="visible_{{$getId()}}">
+        " type="text"
+            x-bind:value="state ? new persianDate(Date.parse(state)).toLocale(@js(Config::get('app.locale'))).format(@js($getDisplayFormat())) : ''"
+            id="visible_{{$getId()}}">
 
-        <input type="hidden" x-model="state" id="{{$getId()}}" >
+        <input type="hidden" x-model="state" id="{{$getId()}}">
     </div>
 </x-dynamic-component>
