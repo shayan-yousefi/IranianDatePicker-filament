@@ -1,3 +1,7 @@
+# V1.1.2
+- the [styling issue](https://github.com/shayan100/IranianDatePicker-filament/issues/4) fixed.
+- package service provider codes cleaned.
+
 # V1.1.1
 - lang folder added to package publishes.
 
