@@ -99,8 +99,10 @@ IranianDatePickerColumn::make('date');
 
 //you can use it with format method
 IranianDatePickerColumn::make('date')->format('Y/m/d');
-
 ```
+
+## CHANGELOG
+you can see change logs in [CHANGELOG.md](https://github.com/shayan100/IranianDatePicker-filament/blob/1.x/CHANGELOG.md)
 
 ## license
 Freely distributable under the terms of the [MIT](https://opensource.org/licenses/MIT "MIT") license.
